@@ -7,10 +7,10 @@ export default {
   data(){
     return {
       mainMenu,
-
       isScrolling: false
     }
-  }
+  },
+  
 }
 </script>
 
@@ -69,21 +69,24 @@ export default {
 
       <ul class="nav justify-content-center py-3">
         <li :class="{'dropdown' : link.brands}"   class="nav-item " v-for="(link, index) in mainMenu" :key="index" >
-          <a :class="{'dropdown-toggle' : link.brands}" class="nav-link" href="#">{{ link.text }}</a>     
-          
-          <div  v-if="link.brands" class="pm-dropdown ">
-            <div class="d-flex " aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#" v-for="(brand, index) in link.brands" :key="index">
-                <div>
-                  <img :src="`/images/${brand.img}`" alt="">
-                  <div class="desc">
-                    <h1 class="ms-3">{{ brand.name }}</h1>
-                    <h4 class="ms-3">{{ brand.desc }}</h4>
-                  </div>
-                </div>
-              </a>
-            </div>
+          <div class="container-hover" @mouseenter="isHover">
+
+            <a :class="{'dropdown-toggle' : link.brands}" class="nav-link" href="#">{{ link.text }}</a>     
+            
           </div>
+            <div v-if="link.brands" class="pm-dropdown ">
+              <div class="d-flex " aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" v-for="(brand, index) in link.brands" :key="index">
+                  <div>
+                    <img :src="`/images/${brand.img}`" alt="">
+                    <div class="desc">
+                      <h1 class="ms-3">{{ brand.name }}</h1>
+                      <h4 class="ms-3">{{ brand.desc }}</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
         </li>
         
       </ul>
@@ -169,12 +172,16 @@ export default {
       li{
         max-width: 100px;
         margin-right: 5px;
-        &:hover{
-          .pm-dropdown{
-            z-index: 400;
-            display: block;
-            opacity: 100;
-          }
+
+        
+
+          &:hover{
+            .pm-dropdown{
+              z-index: 400;
+              display: block;
+              opacity: 100;
+            }
+          
         }
         
         a{
@@ -182,18 +189,20 @@ export default {
           
           &:hover{
             color: black;
+            
           }
           
         }
         .pm-dropdown{
-          transition: 2s;
+          transition: 1s;
+          
           display: none;
-          opacity: 0;
           position: absolute;
           left: -56vw;
           width: 100vw;
           
           div{
+          transition: 1s;
             
             
             img{

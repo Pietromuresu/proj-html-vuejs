@@ -37,6 +37,10 @@ export default {
     this.getCategArr('toys');
     this.getCategArr('transport');
     this.getCategArr('food');
+    console.log(Store.bed);
+    console.log(Store.food)
+    console.log(Store.toys);
+    console.log(Store.transport);
 
   }
 }

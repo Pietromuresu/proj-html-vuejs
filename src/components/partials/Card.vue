@@ -6,6 +6,7 @@ export default {
     image: String,
     name: String,
     price: String,
+    oldPrice: String
   }
 }
 </script>
@@ -13,11 +14,22 @@ export default {
 <template>
   <div>
     <img :src="image" :alt="name">
-    <p>{{ name }}</p>
-    <p>{{ price }}</p>
+    <h4>{{ name }}</h4>
+    <span class="oldPrice">{{ oldPrice }}</span>
+    <span>{{ price }}</span>
   </div>
 </template>
 
 <style lang="scss" scoped>
 
+@import '../../scss/partials/general' ;
+  .oldPrice{
+    text-decoration: line-through ;
+    font-size: smaller;
+    margin-right: 10px;
+  }
+  span{
+    color: $grey;
+    font-size: 15px ;
+  }
 </style>
