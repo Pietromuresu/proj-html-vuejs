@@ -49,6 +49,6 @@ export default {
 </template>
 
 <style lang="scss">
-@import '../node_modules/bootstrap'
-
+@import '../node_modules/bootstrap';
+body { font-family: "Playfair Display", serif; }
 </style>

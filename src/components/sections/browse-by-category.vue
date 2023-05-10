@@ -69,27 +69,27 @@ export default {
               <p>Dry dog food</p>
             </div>
             <img src="/images/food-transparent-18.png" alt="">
-            <div class="btn d-block">
+            <div class="btn green d-block">
               Shop dry food
             </div>
           </div>
           <div class="col text-center  mx-2">
             <div class="bundle pb-3">
-              <h3>Kibble</h3>
+              <h3>Moist</h3>
               <p>Canned dog food</p>
             </div>
               <img src="/images/food-transparent-17.png" alt="">
-            <div class="btn d-block">
+            <div class="btn green d-block">
               Shop moist food
             </div>
           </div>
           <div class="col text-center ">
             <div class="bundle  pb-3">
-              <h3>Kibble</h3>
+              <h3>Frozen</h3>
               <p>Freez-Dried dog food</p>
             </div>
             <img src="/images/food-transparent-16.png" alt="">
-            <div class="btn d-block">
+            <div class="btn green d-block">
               Shop frozen food
             </div>
           </div>
@@ -134,13 +134,26 @@ export default {
       transition: 1s;
 
       &:hover{
-        transform: scale(1.05);
+        transform: scale(1.02);
+        background-color: #1E3721;
+
+        .bundle{
+          p{
+            color: #59AE62
+          }
+        }
       }
       
       .bundle{
+        background-color: transparent;
         padding-top: 80px;
         p{
+          transition: 1s;
           color: $green;
+          font-size: large;
+        }
+        h3{
+          font-size: 30px;
         }
       }
       
@@ -150,13 +163,13 @@ export default {
       }
 
       .btn{
-        background-color: $green;
+
         width: fit-content;
         padding: 5px 20px;
         border-radius: 20px;
         margin: 0 auto;
         margin-bottom: 50px;
-        color: white;
+
 
       }
     }

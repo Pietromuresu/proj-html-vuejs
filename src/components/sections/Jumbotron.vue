@@ -34,7 +34,7 @@ export default {
       <div class="jumbo-text ">
         <p class="mb-4 fw-bold ">FIND THE BEST ANIMAL SUPPLIES</p>
         <h1>We know animals are a part of your family, let us help take care of them</h1>
-        <div class="btn mt-4">Learn more about us</div>
+        <div class="btn white mt-4">Learn more about us</div>
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@ export default {
     line-height: 60px;
     height: 60px;
     color: white;
-    
+    font-size: 17px;  
   }
 
   .pm-jumbotron{
@@ -62,19 +62,22 @@ export default {
     background-image: url('/images/banner-5-2x-scaled.jpg');
     background-size:cover;
 
+    .pm-container{
+      width: 100%;
+    }
+
     .jumbo-text{
       color: white;
-      width: 500px;
+      width: 650px;
+      
 
-      p{
-        font-size: 13px;
-      }
+
+
       .btn{
-        background-color: #fff;
-        color: black;
+
         border-radius: 30px;
-        padding: 5px 20px;
-        font-size: 13px;
+        padding: 10px 20px;
+
       }
     }
   }
@@ -87,7 +90,8 @@ export default {
     height: 130px;
     position: sticky;
     top: 75px;
-
+    font-size: 22px;
+    z-index: 3;
 
     img{
       width: 230px;

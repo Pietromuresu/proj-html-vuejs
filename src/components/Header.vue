@@ -23,7 +23,7 @@ export default {
         <div class="row ">
 
           <div class="col ">
-            <img src="../../public/images/dark-pet-logo.png" alt="">
+            <img src="/images/dark-pet-logo.png" alt="logo">
 
           </div>
 
@@ -48,7 +48,7 @@ export default {
 
           <div class="col d-flex text-end align-items-center justify-content-end ">
             <a href="#" >
-              <img class="cart-icon" src="../../public/images/cart-icon.png" alt="">
+              <img class="cart-icon" src="public/images/cart-icon.png" alt="">
             </a>
             
             <i class="fa-regular fa-user ms-2"></i>
