@@ -9,7 +9,7 @@ const mainMenu = [
   },
   {
     text: 'About',
-    href: '#'
+    href: '#',
   },
   {
     text: 'Blog',
