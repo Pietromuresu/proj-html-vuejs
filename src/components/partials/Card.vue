@@ -29,7 +29,7 @@ export default {
     margin-right: 10px;
   }
   span{
-    color: $grey;
+    color: $green;
     font-size: 15px ;
   }
 </style>

@@ -44,8 +44,9 @@ export default {
 @import '../../scss/partials/general';
 
 .pm-container{
+  margin-bottom: 100px;
   span{
-    color: $green;
+    
     font-size: larger;
   }
   h2{

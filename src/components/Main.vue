@@ -4,13 +4,15 @@ import Jumbotron from './sections/Jumbotron.vue';
 import Categories from './sections/browse-by-category.vue';
 import newArrivals from './sections/new-arrivals.vue';
 import bestSellers from './sections/best-sellers.vue';
+import Reviews from './sections/testimonials.vue';
 export default {
   name: 'Main',
   components:{
     Jumbotron,
     Categories,
     newArrivals,
-    bestSellers
+    bestSellers,
+    Reviews
   },  
   data(){
     return {
@@ -25,6 +27,8 @@ export default {
   <Categories/>
   <newArrivals/>
   <bestSellers/>
+  <Reviews/>
+
 </template>
 
 <style lang="scss" scoped>
