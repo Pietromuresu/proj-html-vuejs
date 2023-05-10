@@ -15,14 +15,14 @@ export default {
 </script>
 
 <template>
-  <header >
-    <div class="pm-header-top row align-items-center p-3">
+  <header  >
+    <div class="pm-header-top row align-items-center p-3 pm-container">
 
       <div class="col-lg-7 ">
 
         <div class="row ">
 
-          <div class="col mb-2">
+          <div class="col ">
             <img src="../../public/images/dark-pet-logo.png" alt="">
 
           </div>
@@ -42,11 +42,11 @@ export default {
         <div class="row ">
 
           <div class="col text-center">
-            <p class="green-number"><strong>Questions?</strong> Call us : 1.800.123.4567</p>
+            <p class="green-number mt-3"><strong>Questions?</strong> Call us : 1.800.123.4567</p>
 
           </div>
 
-          <div class="col d-flex text-end align-items-center justify-content-end mb-3">
+          <div class="col d-flex text-end align-items-center justify-content-end ">
             <a href="#" >
               <img class="cart-icon" src="../../public/images/cart-icon.png" alt="">
             </a>
@@ -77,8 +77,8 @@ export default {
                 <div>
                   <img :src="`/images/${brand.img}`" alt="">
                   <div class="desc">
-                    <h1>{{ brand.name }}</h1>
-                    <h4>{{ brand.desc }}</h4>
+                    <h1 class="ms-3">{{ brand.name }}</h1>
+                    <h4 class="ms-3">{{ brand.desc }}</h4>
                   </div>
                 </div>
               </a>
@@ -89,7 +89,7 @@ export default {
       </ul>
     </div>
 
-    <div class="col d-flex text-end align-items-center justify-content-end mb-3">
+    <div class="col d-flex text-end align-items-center justify-content-end ">
           <a href="#" class="d-none" >
             <img class="cart-icon" src="../../public/images/cart-icon.png" alt="">
           </a>
@@ -104,12 +104,12 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../node_modules/bootstrap' as *;
-@use '../scss/partials/vars' as *;
+@use '../scss/partials/general' as *;
 
 
 
   .pm-header-top{
-    border-bottom: 1px solid $light-grey;
+    height: 100px;
     
     img{
       height: 35px;
@@ -150,6 +150,7 @@ export default {
   }
 
   .pm-header-bottom{
+    border-top: 1px solid $light-grey;
     align-items: center;
     position: sticky;
     z-index: 3;
@@ -170,7 +171,7 @@ export default {
         margin-right: 5px;
         &:hover{
           .pm-dropdown{
-            
+            z-index: 400;
             display: block;
             opacity: 100;
           }
@@ -197,11 +198,12 @@ export default {
             
             img{
               width: 100%;
+              
             }
             .desc{
               position: absolute;
               bottom: 10px;
-              
+             
             }
           }
         }

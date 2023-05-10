@@ -116,6 +116,8 @@ export default {
           width: 100%;
           padding: 15px;
           border-radius: 30px;
+          border: 0;
+          color: black;
         }
 
         .btn{

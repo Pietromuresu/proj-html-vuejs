@@ -1,5 +1,7 @@
 
 <script>
+import { Store } from './assets/data/Store';
+import products from './assets/data/products';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Main from './components/Main.vue';
@@ -14,8 +16,28 @@ export default {
 
   data() {
     return {
-      test: 'testalo'
+      test: 'testalo',
+      Store,
+      products
     }
+  },
+  methods:{
+    getCategArr(category){
+
+      Store[category] = products.filter(product => {
+        if(product.category === category){
+          return true
+        }
+      })
+    }
+  },
+
+  mounted(){
+    this.getCategArr('bed');
+    this.getCategArr('toys');
+    this.getCategArr('transport');
+    this.getCategArr('food');
+
   }
 }
 </script>
