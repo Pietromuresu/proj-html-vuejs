@@ -5,6 +5,7 @@ import Categories from './sections/browse-by-category.vue';
 import newArrivals from './sections/new-arrivals.vue';
 import bestSellers from './sections/best-sellers.vue';
 import Reviews from './sections/testimonials.vue';
+import Newsletter from './sections/Newsletter.vue';
 export default {
   name: 'Main',
   components:{
@@ -12,7 +13,8 @@ export default {
     Categories,
     newArrivals,
     bestSellers,
-    Reviews
+    Reviews,
+    Newsletter
   },  
   data(){
     return {
@@ -28,6 +30,7 @@ export default {
   <newArrivals/>
   <bestSellers/>
   <Reviews/>
+  <Newsletter/>
 
 </template>
 
