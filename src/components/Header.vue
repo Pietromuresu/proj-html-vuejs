@@ -6,14 +6,16 @@ export default {
   
   data(){
     return {
-      mainMenu
+      mainMenu,
+
+      isScrolling: false
     }
   }
 }
 </script>
 
 <template>
-  <header>
+  <header >
     <div class="pm-header-top row align-items-center p-3">
 
       <div class="col-lg-7 ">
@@ -58,7 +60,13 @@ export default {
 
     </div>
 
-    <div class="pm-header-bottom ">
+  </header>
+  <div class="pm-header-bottom row px-4 sticky-top">
+    <div class="col pm-logo">
+      <img class="d-none" src="/images/logo-symbol.png" alt="">
+    </div>
+    <div class="col">
+
       <ul class="nav justify-content-center py-3">
         <li :class="{'dropdown' : link.brands}"   class="nav-item " v-for="(link, index) in mainMenu" :key="index" >
           <a :class="{'dropdown-toggle' : link.brands}" class="nav-link" href="#">{{ link.text }}</a>     
@@ -77,15 +85,27 @@ export default {
             </div>
           </div>
         </li>
-
+        
       </ul>
     </div>
-  </header>
+
+    <div class="col d-flex text-end align-items-center justify-content-end mb-3">
+          <a href="#" class="d-none" >
+            <img class="cart-icon" src="../../public/images/cart-icon.png" alt="">
+          </a>
+          
+          <i class="fa-regular fa-user ms-2 d-none"></i>
+        </div>
+
+  </div>
+
+
 </template>
 
 <style lang="scss" scoped>
 @use '../../node_modules/bootstrap' as *;
 @use '../scss/partials/vars' as *;
+
 
 
   .pm-header-top{
@@ -130,13 +150,24 @@ export default {
   }
 
   .pm-header-bottom{
-    position: relative;
+    align-items: center;
+    position: sticky;
+    z-index: 3;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    .pm-logo{
+      img{
+
+        width: 50px;
+      }
+    }
+
     ul{
 
       li{
-        max-width: 200px;
-        transition: 2s;
-        
+        max-width: 100px;
+        margin-right: 5px;
         &:hover{
           .pm-dropdown{
             
@@ -154,7 +185,7 @@ export default {
           
         }
         .pm-dropdown{
-          
+          transition: 2s;
           display: none;
           opacity: 0;
           position: absolute;
@@ -175,6 +206,14 @@ export default {
           }
         }
       }
+    }
+
+    .cart-icon{
+      height: 25px;
+    }
+
+    .fa-user{
+      font-size: large;
     }
   }
 </style>

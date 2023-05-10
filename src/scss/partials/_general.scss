@@ -1,0 +1,12 @@
+@import './vars';
+
+.btn{
+  color: white;
+  background-color: $green;
+  border: 0;
+
+  &:hover{
+    background-color: darken($color: #3D6F42, $amount: 20%);
+
+  }
+}

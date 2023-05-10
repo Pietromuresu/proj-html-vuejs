@@ -49,4 +49,4 @@ Riproduzione del tema <a href="https://avada.theme-fusion.com/pet-supplies/" tar
             - menu principale (usato anche nell'header)
             - link ai social
 
-    - copiright bar
+    - copyright bar
