@@ -14,7 +14,7 @@ export default {
 <template>
   <div>
     <img :src="image" :alt="name">
-    <h4>{{ name }}</h4>
+    <h4 class="mt-4">{{ name }}</h4>
     <span class="oldPrice">{{ oldPrice }}</span>
     <span>{{ price }}</span>
   </div>
