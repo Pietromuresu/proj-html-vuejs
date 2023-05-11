@@ -63,7 +63,7 @@ export default {
     background-size:cover;
 
     .pm-container{
-      width: 100%;
+      width: 80%;
     }
 
     .jumbo-text{

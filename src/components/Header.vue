@@ -41,7 +41,7 @@ export default {
 
         <div class="row ">
 
-          <div class="col text-center">
+          <div class="col-8 text-center">
             <p class="green-number mt-3"><strong>Questions?</strong> Call us : 1.800.123.4567</p>
 
           </div>
@@ -67,8 +67,8 @@ export default {
     </div>
     <div class="col">
 
-      <ul class="nav justify-content-center py-3">
-        <li :class="{'dropdown' : link.brands}"   class="nav-item " v-for="(link, index) in mainMenu" :key="index" >
+      <ul class="nav justify-content-center py-3 row">
+        <li :class="{'dropdown' : link.brands}"   class="nav-item col" v-for="(link, index) in mainMenu" :key="index" >
           <div class="container-hover" @mouseenter="isHover">
 
             <a :class="{'dropdown-toggle' : link.brands}" class="nav-link" href="#">{{ link.text }}</a>     
@@ -153,6 +153,7 @@ export default {
   }
 
   .pm-header-bottom{
+    width: 100%;
     border-top: 1px solid $light-grey;
     align-items: center;
     position: sticky;
@@ -168,7 +169,7 @@ export default {
     }
 
     ul{
-
+      flex-wrap: nowrap;
       li{
         max-width: 100px;
         margin-right: 5px;
@@ -198,7 +199,8 @@ export default {
           
           display: none;
           position: absolute;
-          left: -56vw;
+          // left: -46vw;
+          right: -420%;
           width: 100vw;
           
           div{

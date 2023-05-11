@@ -54,9 +54,6 @@ export default {
         border: 0;
         background: $light-grey;
       }
-      .btn{
-        width: 25%;
-      }
     }
   }
 

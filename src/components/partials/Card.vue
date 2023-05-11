@@ -23,6 +23,10 @@ export default {
 <style lang="scss" scoped>
 
 @import '../../scss/partials/general' ;
+
+  img{
+    width: 300px;
+  }
   .oldPrice{
     text-decoration: line-through ;
     font-size: smaller;

@@ -15,7 +15,7 @@ export default {
     </div>
     <div class="row pm-container">
       <div class="col">
-        <img src="/images/blog-1-400x400.jpg" alt="">
+        <img src="/images/blog-1-200x200.jpg" alt="">
         <div class="desc w-75 mx-auto" >
           <h4>
             How to 'loose leash walk' your dog
@@ -24,7 +24,7 @@ export default {
         </div>
       </div>
       <div class="col">
-        <img src="/images/blog-2-400x400.jpg" alt="">
+        <img src="/images/blog-2-200x200.jpg" alt="">
         <div class="desc w-75 mx-auto" >
           <h4>
             Stop cats from scratching furniture
@@ -33,7 +33,7 @@ export default {
         </div>
       </div>
       <div class="col">
-        <img src="/images/blog-3-400x400.jpg" alt="">
+        <img src="/images/blog-3-200x200.jpg" alt="">
         <div class="desc w-75 mx-auto" >
           <h4>
             Where to buy the best pet food
@@ -42,7 +42,7 @@ export default {
         </div>
       </div>
       <div class="col">
-        <img src="/images/blog-4-400x400.jpg" alt="">
+        <img src="/images/blog-4-200x200.jpg" alt="">
         <div class="desc w-75 mx-auto" >
           <h4>
             Proper care for your pet toys
@@ -69,9 +69,9 @@ export default {
   .row{
     margin: 50px auto;
     .col{
+      width: 25%;
       img{
-        width: 300px;
-        height: 300px;
+        width: 100%;
         margin-bottom: 40px;
       }
       

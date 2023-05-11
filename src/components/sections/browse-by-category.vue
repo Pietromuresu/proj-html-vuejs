@@ -88,7 +88,7 @@ export default {
               <h3>Frozen</h3>
               <p>Freez-Dried dog food</p>
             </div>
-            <img src="/images/food-transparent-16.png" alt="">
+            <img  src="/images/food-transparent-16.png" alt="">
             <div class="btn green d-block">
               Shop frozen food
             </div>
@@ -132,6 +132,8 @@ export default {
       background-color: $dark-green;
       color: white;
       transition: 1s;
+      
+      
 
       &:hover{
         transform: scale(1.02);
@@ -159,6 +161,7 @@ export default {
       
       img{
         width: 250px;
+        object-fit: contain;
         margin-bottom: 50px;
       }
 
