@@ -7,6 +7,7 @@ import bestSellers from './sections/best-sellers.vue';
 import Reviews from './sections/testimonials.vue';
 import Newsletter from './sections/Newsletter.vue';
 import ctaBlog from './sections/ctaBlog.vue';
+import ctaCatalog from './sections/ctaCatalog.vue';
 export default {
   name: 'Main',
   components:{
@@ -16,7 +17,8 @@ export default {
     bestSellers,
     Reviews,
     Newsletter,
-    ctaBlog
+    ctaBlog,
+    ctaCatalog
   },  
   data(){
     return {
@@ -34,6 +36,7 @@ export default {
   <Reviews/>
   <Newsletter/>
   <ctaBlog/>
+  <ctaCatalog/>
 
 </template>
 
