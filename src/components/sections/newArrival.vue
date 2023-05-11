@@ -157,7 +157,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../scss/partials/general';
-
+h1{
+  font-size: 35px;
+  margin-top: 100px;
+}
 
 .row{
   text-align: center;
