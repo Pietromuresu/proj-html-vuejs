@@ -7,7 +7,10 @@ export default {
   <div class="prebuilts">
 
     <div type="button" class="pm-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
-      <img src="/images/prebuilts.png" alt="">
+      <div class="d-flex">
+        <img class="pm-animated-icon" src="/images/prebuilts.png" alt="">
+        <img class="pm-animated-sobstitute " src="/images/prebuilts.png" alt="">
+      </div>
       Prebuilts
     </div>
     
@@ -26,7 +29,11 @@ export default {
   <div class="shopNow">
 
     <div type="button" class="pm-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
-      <i class="fa-solid fa-cart-shopping fa-flip-horizontal"></i>
+      <div class="d-flex">
+
+        <i class="fa-solid fa-cart-shopping  pm-animated-icon "></i>
+        <i class="fa-solid fa-cart-shopping  pm-animated-sobstitute "></i>
+      </div>
       <p>
         Buy Now
       </p> 
@@ -51,6 +58,17 @@ export default {
 <style lang="scss" scoped>
 @import '../../scss/partials/general';
 
+.pm-animated-icon{
+  transition: .3s;
+  margin-left:13px
+}
+
+.pm-animated-sobstitute{
+  transition: .3s;
+  margin-left: -25px;
+  
+  transform: translateX(100px);
+}
 .prebuilts{
   position: fixed;
   z-index: 2000;
@@ -58,6 +76,7 @@ export default {
     top: 190px;
     right: 20px;
   
+
 }
 
 .shopNow{
@@ -69,6 +88,11 @@ export default {
   font-size: small;
   i{
     font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 7px;
+   
+      
+    
   }
 }
 .pm-btn{
@@ -80,7 +104,20 @@ export default {
   background-color: $white;
   color: #33475B;
   box-shadow: 0 0 140px 4px black;
-  
+  overflow: hidden;
 
+
+  &:hover{
+    .pm-animated-icon{
+      transform: translateX(-100px);
+    }
+
+    .pm-animated-sobstitute{
+      transform: translateX(-10px);
+
+    }
+  }
 }
+
+
 </style>
