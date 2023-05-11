@@ -25,12 +25,13 @@ export default {
 @import '../../scss/partials/general' ;
 
   img{
-    width: 300px;
+    width: 100%;
   }
   .oldPrice{
     text-decoration: line-through ;
     font-size: smaller;
     margin-right: 10px;
+    color: black;
   }
   span{
     color: $green;

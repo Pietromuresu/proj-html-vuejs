@@ -32,7 +32,7 @@ export default {
     }
   },
 
-  mounted(){
+  created(){
     this.getCategArr('bed');
     this.getCategArr('toys');
     this.getCategArr('transport');
