@@ -47,12 +47,39 @@ export default {
           </div>
 
           <div class="col d-flex text-end align-items-center justify-content-end ">
-            <a href="#" >
-              <img class="cart-icon" src="public/images/cart-icon.png" alt="">
-            </a>
-            
-            <i class="fa-regular fa-user ms-2"></i>
-          </div>
+            <ul>
+              <li>
+
+                <a href="#" >
+                  <img class="cart-icon" src="public/images/cart-icon.png" alt="">
+                </a>
+              </li>
+              <li class="position-relative pm-li">
+                <i class="fa-regular fa-user ms-2"></i>
+                <form class="position-absolute pm-login p-4">
+                    <div class="form-group">
+                      
+                      <input type="email" class="form-control"  placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      
+                      <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class=" text-start ">
+                      <input type="checkbox" class="check">
+                      <label class="d-inline" >
+                        Remember me
+                      </label>
+                    </div>
+                    <div class="text-end">
+
+                      <button type="submit" class="btn green">Log in</button>
+                      <button type="submit" class="btn register">Register</button>
+                    </div>
+                  </form>
+              </li>
+              </ul>
+            </div>
 
         </div>
 
@@ -130,7 +157,7 @@ export default {
     input{
       width: 80%;
       min-width: 200px;
-      margin: 0 auto;
+      margin: 10px auto;
       height: 100%;
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
@@ -142,13 +169,64 @@ export default {
     .green-number{
       line-height: 40px;
     }
+    ul{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-bottom:0 ;
+      li{
+        max-width: 40px;
+      }
+      .cart-icon{
+        height: 25px;
+      }
 
-    .cart-icon{
-      height: 25px;
-    }
+      .pm-li{
 
-    .fa-user{
-      font-size: large;
+        transition: 1s;
+          padding-top: 3px;
+          font-size: 21px;
+          
+          &:hover{
+            color: #3D6F42;
+            .pm-login{
+              display: block !important;
+            }
+          
+          }
+      }
+      .pm-login{
+        transition: 1s;
+        display: none;
+        top:30px;
+        left: -150px;
+        background-color: #fff;
+        z-index: 1000;
+        .form-control{
+          padding: 20px 20px;
+          border-radius: 30px;
+        }
+        
+          .check{
+            height: 10px;
+            min-width: 0;
+            width: 10px !important;
+            border: 1px solid black;
+          
+          }
+          label{
+          font-size: 13px;
+        }
+
+        .btn{
+          padding: 5px 20px;
+        }
+        .register{
+          color: #3D6F42;
+          display: block;
+          margin-left: 70%;
+        }
+      }
     }
   }
 

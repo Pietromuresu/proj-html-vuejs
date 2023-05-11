@@ -54,5 +54,7 @@ export default {
 
 <style lang="scss">
 @import '../node_modules/bootstrap';
-body { font-family: "Playfair Display", serif; }
+body { font-family: "Playfair Display", serif; 
+
+overflow-x: hidden;}
 </style>

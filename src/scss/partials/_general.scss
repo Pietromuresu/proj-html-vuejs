@@ -42,3 +42,36 @@
 h1{
   font-size: 60px;
 }
+
+.pm-hover{
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  height: calc(100% - 23%);
+  width: calc(100% - 8%);
+  top: 0;
+  left: 0;
+  margin: 0px 12px;
+  background-color: rgba(175, 118, 13, 0.288);
+  color: white;
+  opacity: 0;
+  transition: 1s;
+
+  &:hover{
+    opacity: 100;
+  }
+
+  span{
+    margin: 0 10px;
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+ }

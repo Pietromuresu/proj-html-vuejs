@@ -46,6 +46,24 @@ export default {
         :oldPrice="Store.bed[0].oldPrice"
         :price="Store.bed[0].price"
         />
+        <div class="pm-hover position-absolute">
+          <div>
+
+            <div class="pm-stars ">
+              ★★★★★
+            </div>
+            <div class="d-block">
+              
+              <a href="#">
+                ADD TO CART
+              </a>
+              <span>/</span>
+              <a href="#">
+                QUICK VIEW
+              </a>
+            </div>
+          </div>
+        </div>
         <div v-if="Store.bed[0].oldPrice" class="sale btn green">sale!</div>
       </div>
       <div class="col-4">
@@ -56,6 +74,24 @@ export default {
         :price="Store.toys[0].price"
         
         />
+        <div class="pm-hover position-absolute">
+          <div>
+
+            <div class="pm-stars ">
+              ★★★★★
+            </div>
+            <div class="d-block">
+              
+              <a href="#">
+                ADD TO CART
+              </a>
+              <span>/</span>
+              <a href="#">
+                QUICK VIEW
+              </a>
+            </div>
+          </div>
+        </div>
         <div v-if="Store.toys[0].oldPrice" class="sale btn green">sale!</div>
 
       </div>
@@ -68,7 +104,24 @@ export default {
         
         />
         <div v-if="Store.food[0].oldPrice" class="sale btn green">sale!</div>
+        <div class="pm-hover position-absolute">
+          <div>
 
+            <div class="pm-stars ">
+              ★★★★★
+            </div>
+            <div class="d-block">
+              
+              <a href="#">
+                ADD TO CART
+              </a>
+              <span>/</span>
+              <a href="#">
+                QUICK VIEW
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-4" v-for="(item, index) in transport" :key="index">
         <Card
@@ -79,7 +132,24 @@ export default {
         
         />
         <div v-if="item.oldPrice" class="sale btn green">sale!</div>
+        <div class="pm-hover position-absolute">
+          <div>
 
+            <div class="pm-stars ">
+              ★★★★★
+            </div>
+            <div class="d-block">
+              
+              <a href="#">
+                ADD TO CART
+              </a>
+              <span>/</span>
+              <a href="#">
+                QUICK VIEW
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -95,6 +165,7 @@ export default {
   .col-4{
     margin-bottom: 50px;
     position: relative;
+    overflow: hidden;
     img{
       width: 100%;
     }
@@ -109,5 +180,10 @@ export default {
   padding: 2px 5px;
   border-radius: 80%;
   text-transform: capitalize;
+}
+
+.pm-hover{
+  width: calc(100% - 6%) ;
+  height: calc(100% - 18%);
 }
 </style>

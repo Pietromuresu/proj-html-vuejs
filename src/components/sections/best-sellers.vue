@@ -27,7 +27,7 @@ export default {
     </div>
   </div>
   <div class="row pm-container">
-    <div class="col-3 text-center   " v-for="(item, index) in Store.transport" :key="index">
+    <div class="col-3 text-center position-relative  " v-for="(item, index) in Store.transport" :key="index">
 
       <Card
       class=" overFlow"
@@ -36,6 +36,15 @@ export default {
       :oldPrice="item.oldPrice"
       :price="item.price"
       /> 
+      <div class="pm-hover position-absolute">
+        <a href="#">
+          ADD TO CART
+        </a>
+        <span>/</span>
+        <a href="#">
+          QUICK VIEW
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -58,8 +67,9 @@ export default {
   overflow: hidden;
   flex-wrap: nowrap ;
   
-  .col{
-    width: 300px;
+  .col-3{
+    overflow: hidden;
+
   }
 }
 
@@ -67,4 +77,7 @@ export default {
   overflow: hidden;
 
 }
+
+
+ 
 </style>
