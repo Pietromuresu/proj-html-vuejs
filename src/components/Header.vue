@@ -88,23 +88,23 @@ export default {
     </div>
 
   </header>
-  <div class="pm-header-bottom row px-4 sticky-top">
+  <div class="pm-header-bottom row px-4 sticky-top position-relative">
     <div class="col pm-logo">
       <img class="d-none" src="/images/logo-symbol.png" alt="">
     </div>
     <div class="col">
 
       <ul class="nav justify-content-center py-3 row">
-        <li :class="{'dropdown' : link.brands}"   class="nav-item col" v-for="(link, index) in mainMenu" :key="index" >
+        <li :class="{'dropdown' : link.brands}"   class="nav-item position-static col" v-for="(link, index) in mainMenu" :key="index" >
           <div class="container-hover" @mouseenter="isHover">
 
             <a :class="{'dropdown-toggle' : link.brands}" class="nav-link" href="#">{{ link.text }}</a>     
             
           </div>
-            <div v-if="link.brands" class="pm-dropdown ">
+            <div v-if="link.brands" class="pm-dropdown position-absolute">
               <div class="d-flex " aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="#" v-for="(brand, index) in link.brands" :key="index">
-                  <div>
+                  <diV class="max-height">
                     <img :src="`/images/${brand.img}`" alt="">
                     <div class="desc">
                       <h1 class="ms-3">{{ brand.name }}</h1>
@@ -231,6 +231,7 @@ export default {
   }
 
   .pm-header-bottom{
+    position: relative;
     width: 100%;
     border-top: 1px solid $light-grey;
     align-items: center;
@@ -277,8 +278,8 @@ export default {
           
           display: none;
           position: absolute;
-          // left: -46vw;
-          right: -420%;
+          left: 0;
+          // right: -420%;
           width: 100vw;
           
           div{
@@ -305,6 +306,13 @@ export default {
 
     .fa-user{
       font-size: large;
+    }
+  }
+
+  .max-height{
+    max-height: 400px;
+    img{
+      max-height: 400px;
     }
   }
 </style>
