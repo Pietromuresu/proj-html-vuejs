@@ -88,7 +88,7 @@ export default {
     </div>
 
   </header>
-  <div class="pm-header-bottom row px-4 sticky-top position-relative">
+  <div class="pm-header-bottom row px-4 sticky-top ">
     <div class="col pm-logo">
       <img class="d-none" src="/images/logo-symbol.png" alt="">
     </div>
