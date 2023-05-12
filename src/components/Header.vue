@@ -51,7 +51,7 @@ export default {
               <li>
 
                 <a href="#" >
-                  <img class="cart-icon" src="public/images/cart-icon.png" alt="">
+                  <img class="cart-icon" src="/images/cart-icon.png" alt="">
                 </a>
               </li>
               <li class="position-relative pm-li">
